@@ -1,4 +1,14 @@
-<script src="https://smartbizloans2.my.site.com/lightning/lightning.out.latest/index.iife.prod.js"></script>
+<style>
+        .slds-visual-picker_vertical .slds-visual-picker__figure {
+            height: inherit !important;
+        }
+
+        .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+            display: inline-flex !important;
+        }
+</style>
+
+<script src="https://smartbizloans2.my.site.com/lightning/lightning.out.js"></script>
 
 <script>
     $Lightning.use("runtime_appointmentbooking:lightningOutGuest",
@@ -8,12 +18,13 @@
                 { },    // attributes to set on the component when created
                 "lexcontainer",    // the DOM location to insert the component
                 function(component) {            // API name of the Flow
-                    component.startFlow("Inbound_New_Guest_with_Payments");
+                    component.startFlow("Salesforce_Scheduler_Unauthenticated");
                 }
             );
-        },    'https://smartbizloans2.my.site.com/Prospects/s/flow/Inbound_New_Guest_with_Payments'  // Site endpoint
+        },    'https://smartbizloans2.my.site.com/Prospects'  // Site endpoint
     );
 </script>
+
 <div id="lexcontainer">
 <p>Invoke the Lightning Component specified in the Script.</p>
 </div>
